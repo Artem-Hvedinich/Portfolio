@@ -1,6 +1,15 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    border: 2px solid rgba(236, 182, 209, 0.68);
+.main {
+    height: 100vh;
+    background-color: rgba(141, 43, 176, 0.57)
 }
+
+.text {
+
+    width: 300px;
+}
+
+.photo {
+    height: 300px;
+    width: 200px;
+}
+

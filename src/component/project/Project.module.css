@@ -1,6 +1,22 @@
-.nav {
+.project_block {
+    min-height: 100vh;
+    background-color: rgb(174, 243, 214);
+}
+
+.project_contanier {
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid;
+}
+
+.title {
+    background-color: rgba(10, 225, 15, 0.69);
+}
+
+.projects {
     display: flex;
-    justify-content: space-between;
-    width: 300px;
-    border: 2px solid rgba(236, 182, 209, 0.68);
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid;
 }

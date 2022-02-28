@@ -1,6 +1,22 @@
-.nav {
+.skills_block {
+    min-height: 100vh;
+    background-color: rgba(173, 255, 47, 0.89);
+}
+
+.skills_contanier {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    background-color: rgba(10, 225, 15, 0.69);
+    padding: 20px 40px;
+}
+
+.skills {
     display: flex;
-    justify-content: space-between;
-    width: 300px;
-    border: 2px solid rgba(236, 182, 209, 0.68);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid;
 }

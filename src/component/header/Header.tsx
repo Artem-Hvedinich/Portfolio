@@ -1,11 +1,11 @@
 import React from 'react';
 import s from './Header.module.css'
+import {Nav} from "../nav/Nav";
 
 export const Header = () => {
     return (
         <div className={s.header}>
-            <h1>I'm Artem Hvedinich
-                Frontend React Developer</h1>
+            <Nav/>
         </div>
     );
 };

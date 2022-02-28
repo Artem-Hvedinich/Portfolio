@@ -1,10 +1,12 @@
-.project_block {
-    min-height: 100vh;
-    background-color: rgb(174, 243, 214);
-}
-
-.project_contanier {
+.project {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 280px;
+    background-color: rgba(0, 255, 0, 0.27);
+    border: 1px solid red;
 }
 
+.text {
+}
