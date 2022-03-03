@@ -1,15 +1,14 @@
 .main {
     height: 100vh;
-    background-color: rgba(141, 43, 176, 0.57)
+    background-color: rgb(66, 63, 63)
 }
 
 .text {
-
     width: 300px;
 }
 
 .photo {
-    height: 300px;
-    width: 200px;
+    height: 500px;
+    width: 350px;
 }
 

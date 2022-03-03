@@ -1,6 +1,8 @@
 .skills_block {
+    display: flex;
+    align-items: center;
     min-height: 100vh;
-    background-color: rgba(173, 255, 47, 0.89);
+    background-color: rgb(73, 72, 72);
 }
 
 .skills_contanier {
@@ -9,7 +11,6 @@
 }
 
 .title {
-    background-color: rgba(10, 225, 15, 0.69);
     padding: 20px 40px;
 }
 

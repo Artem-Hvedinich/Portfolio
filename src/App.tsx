@@ -5,6 +5,8 @@ import {Main} from "./component/main/Main";
 import {Skills} from "./component/skills/Skills";
 import {v1} from "uuid";
 import {Project} from "./component/project/Project";
+import {Form} from "./component/form/Form";
+import {Footer} from "./footer/Footer";
 
 export type SkillsType = {
     id: string
@@ -85,6 +87,8 @@ function App() {
             <Main/>
             <Skills skills={skills}/>
             <Project project={project}/>
+            <Form/>
+            <Footer/>
         </div>
     );
 }

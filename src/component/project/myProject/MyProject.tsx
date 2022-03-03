@@ -12,7 +12,7 @@ export const MyProject = (props: MyProjectPropsType) => {
                 props.project.map(m => {
                     return <div className={s.project}
                                 key={m.id}>
-                        <img src={m.img} alt={'My Photo'} style={{width: "280px"}}/>
+                        <button type={'button'}><img src={m.img} alt={'My Photo'} style={{width: "360px"}}/></button>
                         <h3 className={s.title_skills}>{m.title}</h3>
                         <span className={s.text}>{m.text}</span>
                         <p><a href={m.href}>Go to GitHub</a></p>

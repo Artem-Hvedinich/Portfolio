@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    background-color: rgb(73, 72, 72);
+    border: red 1px solid;
+}
+
+.href {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    flex-wrap: wrap;
+    border: greenyellow 1px solid;
+}
