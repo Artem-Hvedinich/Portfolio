@@ -11,27 +11,24 @@
     flex-direction: column;
 }
 
-h3 {
-    color: rgba(255, 255, 255, 0.88);
-}
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
 }
 
 input, textarea {
-    width: 100%;
+    width: 300px;
     height: 40px;
     margin-top: 10px;
     background-color: rgb(42, 38, 38);
     border: 1px solid grey;
+    border-radius: 7px;
     resize: none;
+    padding: 5px 0 0 10px;
 }
 
-textarea{
+textarea {
     height: 80px;
 }
 
@@ -40,4 +37,5 @@ textarea{
     height: 40px;
     margin-top: 10px;
     background-color: rgba(255, 219, 0, 0.9);
+    border-radius: 15px;
 }

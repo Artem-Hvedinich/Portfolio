@@ -11,12 +11,13 @@ export const Skill = (props: SkillsPropsType) => {
         <>
             {
                 props.skills.map(m => {
-                    return <div className={s.skill}
-                                key={m.id}>
-                        <img src={m.img} alt={'My Photo'} style={{width: "60px"}}/>
-                        <h3 className={s.title_skills}>{m.title}</h3>
-                        <span className={s.text}>{m.text}</span>
-                    </div>
+                    return (
+                        <div className={s.skill}
+                             key={m.id}>
+                            <img className={s.img} src={m.img} alt={'My Photo'}/>
+                            <h3 className={s.title_skills}>{m.title}</h3>
+                            <span className={s.text}>{m.text}</span>
+                        </div>)
                 })
             }
         </>

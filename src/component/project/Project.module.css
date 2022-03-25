@@ -2,20 +2,20 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(66, 63, 63);
+    background-color: rgba(33, 30, 30, 0.98);
 }
 
 .project_contanier {
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
-
-
-.projects {
+.my_portfolio {
     display: flex;
-    width: 100%;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid;
+    width: 100%;
+    margin-top: 30px;
 }
+

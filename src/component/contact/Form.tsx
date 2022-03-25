@@ -6,7 +6,7 @@ export const Form = () => {
     return (
         <div className={s.form_block}>
             <div className={`${s.form_container} ${c.container}`}>
-                <h3>Contact</h3>
+                <h3 style={{backgroundColor:'white'}}>Contact</h3>
                 <form>
                     <input placeholder={'Name'} className={s.input}/>
                     <input placeholder={'Your contact'} className={s.input}/>
