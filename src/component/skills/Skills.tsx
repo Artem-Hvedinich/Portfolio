@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Skills.module.css'
-import c from '../common/styles/Contanier.module.css'
 import {SkillsType} from "../../App";
 import {Skill} from "./skill/Skill";
 
@@ -9,11 +8,10 @@ type SkillsPropsType = {
 }
 
 
-
 export const Skills = (props: SkillsPropsType) => {
     return (
         <div className={s.skills_block}>
-            <div className={`${s.skills_contanier} ${c.container}`}>
+            <div className={`$s.skills_contanier $c.container`}>
                 <h2 className={s.title}>Skills</h2>
                 <div className={s.skills}>
                     <Skill skills={props.skills}/>

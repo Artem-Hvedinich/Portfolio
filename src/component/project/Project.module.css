@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background-color: rgba(33, 30, 30, 0.98);
+    border: 1px solid
 }
 
 .project_contanier {
@@ -13,7 +13,7 @@
 .my_portfolio {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 30px;

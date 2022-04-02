@@ -1,0 +1,13 @@
+.m_menu {
+    position: fixed;
+    width: 24%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #181818;
+    transition: all 10s ease 0s;
+}

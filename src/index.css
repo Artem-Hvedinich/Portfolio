@@ -1,17 +1,84 @@
-* {
-    box-sizing: border-box;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    font-size: 2.1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    margin: 0;
+    background-color: #000000;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+    font-size: 3.4rem;
+    line-height: 1.4em;
+    letter-spacing: -.005em;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #7c7c7c;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-size: 10rem;
+    line-height: 1em;
+    font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -.005em;
+    line-height: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+user agent stylesheet
+:-webkit-any(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .2);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border: 5px solid #fff;
 }
