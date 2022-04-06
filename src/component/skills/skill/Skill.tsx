@@ -1,17 +1,15 @@
 import React from 'react';
 import s from './Skill.module.css'
-import {SkillsType} from "../../../App";
 import reactImg from '../../common/imege/react-svg.svg'
+import {store} from "../../../store/store";
 
-type SkillsPropsType = {
-    skills: Array<SkillsType>
-}
 
-export const Skill = (props: SkillsPropsType) => {
+export const Skill = () => {
+    const skills = store.skills
     return (
         <>
             {
-                props.skills.map(m => {
+                skills.map(m => {
                     return (
                         <div className={s.skill}
                              key={m.id}>

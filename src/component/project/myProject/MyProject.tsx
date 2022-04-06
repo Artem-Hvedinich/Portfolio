@@ -1,16 +1,13 @@
-import {ProjectType} from "../../../App";
 import s from "./MyProject.module.css";
 import React from "react";
-import IMG12 from '../../common/imege/lonely-man.jpg'
+import {store} from "../../../store/store";
 
-export type MyProjectPropsType = {
-    project: Array<ProjectType>
-}
-export const MyProject = (props: MyProjectPropsType) => {
+export const MyProject = () => {
+    const project = store.project
     return (
         <>
             {
-                props.project.map(m => {
+                project.map(m => {
                     return <div className={s.project}
                                 key={m.id}>
                         <div className={s.image_block}>
