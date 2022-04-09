@@ -9,15 +9,15 @@ import React from "react";
 
 export type SkillType = {
     id: string
-    img: any
     title: string
-    text: string
+    completed: number
 }
 export type ProjectType = {
     id: string
     title: string
     text: string
     href: string
+    img: string
 }
 
 export type StoreType = {
@@ -27,58 +27,25 @@ export type StoreType = {
 
 export const store: StoreType = {
     skills: [
-        {
-            id: v1(),
-            img: <JsImg/>,
-            title: 'JS',
-            text:
-                'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        }, {
-            id: v1(),
-            img: <CssImg/>,
-            title: 'CSS',
-            text: 'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        }, {
-            id: v1(),
-            img: <ReactImg/>,
-            title: 'React',
-            text: 'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        },
-        {
-            id: v1(),
-            img: <WebDevImg/>,
-            title: 'Web Development',
-            text: 'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        }, {
-            id: v1(),
-            img: <TsImg/>,
-            title: 'TypeScript',
-            text: 'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        }, {
-            id: v1(),
-            img: <ReduxImg/>,
-            title: 'Redux',
-            text: 'Lorem Ipsum is simply dummy text of the printing' +
-                ' and typesetting industry. Lorem Ipsum has been the '
-        },
+        {id: v1(), title: 'HTML/CSS', completed: 89},
+        {id: v1(), title: 'JavaScript/TypeScript', completed: 78},
+        {id: v1(), title: 'React/Redux', completed: 65},
+
     ],
     project: [
         {
             id: v1(),
-            title: 'Todolist',
+            title: 'Social Network',
             text: 'Todolist - react applications for keeping a list of completed tasks',
-            href: 'https://artem-hvedinich.github.io/Todolist'
+            href: 'https://artem-hvedinich.github.io/Todolist',
+            img: 'https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2014/06/08085245/social-network-800x450.png',
         },
         {
             id: v1(),
             title: 'Todolist',
             text: 'hsndfsfiughfdsifkhndskjf',
-            href: 'https://artem-hvedinich.github.io/Todolist'
+            href: 'https://artem-hvedinich.github.io/Todolist',
+            img: 'https://collegeinfogeek.com/wp-content/uploads/2019/05/best-to-list-apps-featured-image.jpg',
         }
     ]
 }

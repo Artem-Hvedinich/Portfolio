@@ -1,0 +1,14 @@
+.menu {
+    display: flex;
+}
+
+.text {
+    color: #7c7c7c;
+    font-size: 1.5rem;
+}
+
+
+.text:hover,
+.text:active {
+    color: #e3af00;
+}
