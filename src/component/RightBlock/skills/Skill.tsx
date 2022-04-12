@@ -1,8 +1,7 @@
 import React from 'react';
-import s from './Skill.module.css'
 import {store} from "../../../store/store";
 import styled from "styled-components";
-import {LineSeparator, Text, Title} from '../../common/Wrappers';
+import {LineSeparator, Text} from '../../common/Wrappers';
 
 const Wrap = styled.div`
   display: flex;
@@ -10,14 +9,14 @@ const Wrap = styled.div`
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 20px;
-  height: 100vh`
+`
 
 export const SkillWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 20px;`
+  margin-top: 2vw;`
 
 export const Fill = styled.p<{ completed: number }>`
   width: ${props => `${props.completed}%`};
@@ -38,6 +37,7 @@ const Percent = styled.p`
   font-size: 1.2vw;
   line-height: 1vw;
   color: white;
+
   ::after {
     display: block;
     content: "";
@@ -49,7 +49,7 @@ const Percent = styled.p`
     z-index: -2;
     left: 50%;
     position: absolute;
-    transform: translate(-50%,50%) rotate(225deg);
+    transform: translate(-50%, 50%) rotate(225deg);
 `
 
 export const Skill = () => {
@@ -67,7 +67,6 @@ export const Skill = () => {
                             <Bar left={m.completed}>
                                 <Percent>{m.completed}%</Percent>
                             </Bar>
-
                         </SkillWrapper>)
                 })}
         </Wrap>

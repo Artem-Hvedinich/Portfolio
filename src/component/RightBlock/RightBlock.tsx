@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import {Main} from "./main/Main";
 import {Skills} from "./skills/Skills";
 import {Project} from "./project/Project";
-import {Form} from "./contact/Form";
-import {Footer} from "./footer/Footer";
 import {Styles} from "../common/Styles";
+import {About} from './About';
+import {Resume} from './Resume';
+import { Home } from './Home';
+import {Contact} from "./Contact";
 
 const RightBlockWrapper = styled.div`
   position: fixed;
@@ -18,18 +19,21 @@ const RightBlockWrapper = styled.div`
 const Scroll = styled.div`
   z-index: 100;
   height: 100vh;
-  overflow-y: scroll;`
+  overflow-y: scroll;
+  scroll-behavior: inherit;`
 
 const InnerContent = styled.div`
   position: relative;
   width: 50%;
   left: 50%;
   overflow: visible;
-  transform: translate(0px, 0px);
-  transition: transform 1s;`
+  transform: translate(0px, -10px);
+  transition: transform 1s;
+  transition-delay: 1s;
+`
 
 const SectionContainer = styled.div`
-  max-width: 90%;
+  max-width: 85%;
   position: relative`
 
 const StylesWrapper = styled.div`
@@ -47,11 +51,12 @@ export const RightBlock = () => {
             <Scroll>
                 <InnerContent>
                     <SectionContainer>
-                        <Main/>
-                        <Skills/>
-                        <Project/>
-                        <Form/>
-                        <Footer/>
+                            <Home/>
+                            <About/>
+                            <Resume/>
+                            <Skills/>
+                            <Project/>
+                            <Contact/>
                     </SectionContainer>
                 </InnerContent>
             </Scroll>

@@ -1,16 +1,17 @@
 import React from 'react';
-import {MyProject} from "./myProject/MyProject";
+import {MyProject} from "./MyProject";
 import {RightBlockTitle} from "../../common/RightBlockTitle";
+import {Wrapper} from "../../common/Wrappers";
 
 
 export const Project = () => {
     return (
-        <div style={{  gap: '5vw'}}>
-            <RightBlockTitle
-                title={'PORTFOLIO'}
-                text={'Selected Work'}/>
+        <Wrapper id={'Portfolio'}>
+            <RightBlockTitle width={32}
+                             title={'PORTFOLIO'}
+                             text={'Selected Work'}/>
             <MyProject/>
-        </div>
+        </Wrapper>
     )
 }
 

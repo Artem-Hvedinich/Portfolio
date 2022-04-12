@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {RightBlock} from "./component/RightBlock/RightBlock";
 import {LeftBlock} from "./component/LeftBlock/LeftBlock";
 import {gradient} from "./component/common/Wrappers";
+import {useMatch} from "react-router-dom"
 
 const AppWrapper = styled.div`
   position: fixed;
@@ -28,11 +29,16 @@ const NavOnOff = styled.div<{ width: number, opacity: number }>`
   overflow: hidden;
   transition: opacity 1s, transform 1s;
   opacity: ${props => props.opacity};
-  transform: ${props => `translate(${props.width}%,0px)`};`
+  transform: ${props => `translate(${props.width}%,0px)`};
+  transition-delay: 0.25s;
+`
 
 function App() {
     const [active, setActive] = useState(false)
-
+    // const match = useMatch({
+    //     path: '*',
+    // });
+    // console.log(match)
     return (
         <AppWrapper>
             <NavOnOff opacity={active ? 0.6 : 1} width={active ? -25 : 0}>
@@ -45,3 +51,5 @@ function App() {
 }
 
 export default App;
+
+

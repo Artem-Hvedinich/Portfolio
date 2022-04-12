@@ -11,7 +11,8 @@ const LeftBlockWrapper = styled.div`
   justify-content: center;
   align-items: center;
   perspective: 38rem;
-  z-index: 2;`
+  z-index: 2;
+`
 
 export const LeftBlock = () => {
     return (

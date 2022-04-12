@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import MyPhoto from '../common/imege/avatar.jpg'
-import {Line} from "../common/Line/Line";
-import {LineSeparator} from "../common/Wrappers";
+import {Line, LineSeparator} from "../common/Wrappers";
 
 export const AvatarWrapper = styled.div`
   position: relative;
-  width: 26vw;
+  width: 24vw;
   height: 32vw;
   transform: translate(0%, 0px) rotateY(15deg);
   opacity: 1;
   z-index: 1;
-  transition: transform 1s, opacity 1s;
-: hover {
+  transition: transform 1s, opacity 1s;: hover {
   opacity: 0.8;
   transform: translate(10%, 0) rotateY(0deg);
 }`
@@ -19,22 +17,29 @@ export const AvatarWrapper = styled.div`
 export const PhotoWrapper = styled.div`
   position: absolute;
   height: 100%;
-  width: 100%;`
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), 40%, rgba(7, 7, 7, 0));
+`
 
-export const Photo = styled.img`
+export const Photo = styled.div<{ bgImg: string }>`
+  background-size: cover;
   position: absolute;
+  background-position: center;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
-  background-position: center;
-  background-size: 100%;`
+  z-index: -2;
+  background-color: black;
+  background-image: url("${props => props.bgImg}");`
 
 export const NameWrapper = styled.div`
   position: absolute;
   left: 3vw;
-  bottom: 3vh;
-  z-index: 10;
-  background-color: rgba(42, 38, 38, 0.2);`
+  bottom: 3vw;
+  z-index: 1;`
 
 export const Name = styled.p`
   letter-spacing: 0;
@@ -46,7 +51,7 @@ export const Avatar = () => {
     return (
         <AvatarWrapper>
             <PhotoWrapper>
-                <Photo src={MyPhoto}/>
+                <Photo bgImg={MyPhoto}/>
             </PhotoWrapper>
             <NameWrapper>
                 <Name>Hvedinich Artem</Name>
