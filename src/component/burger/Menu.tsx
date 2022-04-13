@@ -35,6 +35,7 @@ const Img = styled.svg`
 type propsMenuType = {
     menu: Array<MenuType>
     active: boolean
+    setActive: (active: boolean) => void
 }
 
 export const Menu = (props: propsMenuType) => {
@@ -44,7 +45,7 @@ export const Menu = (props: propsMenuType) => {
                     return (
                         <MainBlock key={m.id}>
                             <Img>{m.img}</Img>
-                            <TextNav href={`#${m.title}`}>{m.title}</TextNav>
+                            <TextNav onClick={() => props.setActive(!props.active)} href={`#${m.title}`}>{m.title}</TextNav>
                         </MainBlock>
                     )
                 }

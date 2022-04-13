@@ -7,23 +7,24 @@ import {InstaImg} from "../common/imege/InstaImg";
 import {TelegramImg} from '../common/imege/TelegramImg';
 import {LinkedinImg} from "../common/imege/LinkedinImg";
 
-const NavWrapper = styled.div<{ width: number, height: number }>`
+const NavWrapper = styled.div<{ active: boolean }>`
   width: 100%;
   height: 100vh;
-  transform: ${props => `translate(${props.width}%,${props.height}rem)`};
+  transform: ${props => `translate(${props.active ? 0 : 100}%,0rem)`};
   transition: transform 1s;
   transition-delay: 0.25s;
   background-color: rgba(17, 14, 14, 0.93)`
 
-const MenuWrapper = styled.div <{ height: number }>`
+const MenuWrapper = styled.div <{ active: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   width: 100%;
   height: 100%;
-  transform: ${props => `translate(0,${props.height}vw)`};
-  transition: all 1s;
+  opacity: ${props => props.active ? 1 : 0};
+  transform: ${props => `translate(0,${props.active ? 0 : -70}vw)`};
+  transition: transform 1s, opacity 2s;
   transition-delay: 0.75s;
   left: 4vw;`
 
@@ -38,7 +39,7 @@ const TextMenu = styled(TextSocial)`
   margin-bottom: 3vw;
 `
 const SocialWrapper = styled.div`
-  margin-left: 2.5rem;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +47,6 @@ const SocialWrapper = styled.div`
   width: 40%;
   font-size: 1.3vw;
   margin-top: 5vh`
-
 
 const IconWrapper = styled.div`
   width: 100%;
@@ -56,17 +56,15 @@ const IconWrapper = styled.div`
 
 type PropsType = {
     active: boolean
+    setActive: (active: boolean) => void
 }
 export const Nav = (props: PropsType) => {
     const menu = store.menu
-    const width = props.active ? 0 : 100
-    const height = props.active ? 0 : -40
-
     return (
-        <NavWrapper width={width} height={0}>
-            <MenuWrapper height={height}>
+        <NavWrapper active={props.active}>
+            <MenuWrapper active={props.active}>
                 <TextMenu>Menu</TextMenu>
-                <Menu active={props.active} menu={menu}/>
+                <Menu active={props.active} setActive={props.setActive} menu={menu}/>
                 <SocialWrapper>
                     <TextSocial>Social</TextSocial>
                     <IconWrapper>

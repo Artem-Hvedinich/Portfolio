@@ -1,5 +1,5 @@
 * {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +16,6 @@ body {
     margin: 0;
     background-color: #000000;
     scroll-behavior: smooth;
-
 }
 
 a {

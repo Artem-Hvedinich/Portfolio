@@ -20,7 +20,7 @@ export const PhotoWrapper = styled.div`
   width: 100%;
   cursor: pointer;
   display: block;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), 40%, rgba(7, 7, 7, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), 20%, rgba(7, 7, 7, 0));
 `
 
 export const Photo = styled.div<{ bgImg: string }>`
