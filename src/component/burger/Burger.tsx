@@ -1,40 +1,62 @@
-import React from 'react';
-import {Nav} from "./Nav";
-import OutsideAlerter from "../common/Hook/CloseOnClick";
-import {BurgerDeleteIcon} from "./BurgerDeleteIcon";
+import React, {useCallback} from "react";
 import styled from "styled-components";
 
-const NavWrapper = styled.div`
-  position: fixed;
-  right: 0;
-  width: 25%;
-  z-index: 60;
-  top: 0;
-  height: 100vh;
+const BurgerWrapper = styled.div`
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  z-index: 61;
+  cursor: pointer;
+`;
+
+const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: all 1s;
-  transition-delay: 0.5s;
-`
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 1.5rem;
+`;
 
-type BurgerPropsType = {
-    active: boolean
-    setActive: (active: boolean) => void
-}
-export const Burger: React.FC<BurgerPropsType> = ({active, setActive}) => {
+const Line = styled.div<{
+    width?: any;
+    height?: any;
+    rotate?: any;
+}>`
+  border-color: #ffffff;
+  border-style: solid;
+  height: 0;
+  width: 100%;
+  border-width: 0;
+  border-bottom: 0.1rem solid #ffffff;
+  display: block;
+  transition: 0.5s;
+  transform: ${(props) =>
+          `translate(${props.width}rem,${props.height}rem) rotate(${props.rotate}deg)`};
+`;
 
-    const outsideHandler = () => {
-        setActive(false)
-    }
+type Props = {
+    active: boolean;
+    onChange: (active: boolean) => void;
+};
+
+export const Burger: React.FC<Props> = ({active, onChange}) => {
+    const onClick = useCallback(() => {
+            onChange(!active);
+        }, [active]
+    )
 
     return (
-        <OutsideAlerter active={active} outsideHandler={outsideHandler}>
-            <BurgerDeleteIcon active={active} onChange={setActive}/>
-            {active ? <NavWrapper><Nav setActive={setActive} active={active}/></NavWrapper>
-                : <NavWrapper><Nav setActive={setActive} active={active}/></NavWrapper>
-            }
-        </OutsideAlerter>
-    )
-}
-
+        <BurgerWrapper onClick={onClick}>
+            {active ? (
+                <Wrapper>
+                    <Line width={0} height={0.2} rotate={45}/>
+                    <Line width={0} height={-0.4} rotate={-45}/>
+                </Wrapper>
+            ) : (
+                <Wrapper>
+                    <Line width={0} height={0}/>
+                    <Line width={0} height={0}/>
+                </Wrapper>
+            )}
+        </BurgerWrapper>
+    );
+};

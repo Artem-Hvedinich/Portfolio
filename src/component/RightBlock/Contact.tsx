@@ -42,7 +42,7 @@ export const Arrow = styled.span`
   padding: 0.2vw;
   transform: rotate(-45deg);
   transition: all 0.35s;
-  
+
   :hover {
     border-color: #e3af00;
   }`
@@ -78,6 +78,7 @@ const Textarea = styled.textarea`
   outline: none;`
 
 export const Contact = () => {
+    console.log('Contact')
     return (
         <Wrapper id={'Contact'}>
             <RightBlockTitle title={'CONTACT'} text={"Let's get in touch."} width={32}/>
@@ -98,3 +99,4 @@ export const Contact = () => {
     )
 };
 
+export const ContactMemo = React.memo(Contact)

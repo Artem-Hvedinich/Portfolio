@@ -1,6 +1,7 @@
 import React from 'react';
 import {MainText, Wrapper} from "../common/Wrappers";
 import {RightBlockTitle} from "../common/RightBlockTitle";
+import {Home} from "./Home";
 
 export const About = () => {
     return (
@@ -13,3 +14,4 @@ export const About = () => {
         </Wrapper>
     );
 };
+export const AboutMemo = React.memo(About)

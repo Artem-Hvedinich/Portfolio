@@ -1,8 +1,9 @@
 import React from 'react';
+import {SvgWrapper} from "../Wrappers";
 
-export const ContactImg = () => {
+export const ContactImg = ({ className }: { className?: string }) => {
     return (
-        <svg width='1.5vw' viewBox="0 0 510 510" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <SvgWrapper width='1.5vw' viewBox="0 0 510 510" version="1.1" xmlns="http://www.w3.org/2000/svg" className={className}>
             <path fill="#7c7c7c" d="M428,41.533H30c-16.568,0-30,13.431-30,30v252c0,16.568,13.432,30,30,30h132.1l43.942,52.243
 				c5.7,6.777,14.103,10.69,22.959,10.69c8.856,0,17.259-3.912,22.959-10.69l43.942-52.243H428c16.569,0,30-13.432,30-30v-252
 				C458,54.965,444.569,41.533,428,41.533z M428,323.533H281.932L229,386.465l-52.932-62.932H30v-252h398V323.533z"/>
@@ -12,6 +13,6 @@ export const ContactImg = () => {
 				S75.095,212.675,83.379,212.675z"/>
             <path fill="#7c7c7c" d="M83.379,280.456h244.623c8.284,0,15-6.716,15-15s-6.716-15-15-15H83.379c-8.284,0-15,6.716-15,15
 				S75.095,280.456,83.379,280.456z"/>
-        </svg>
+        </SvgWrapper>
     )
 }

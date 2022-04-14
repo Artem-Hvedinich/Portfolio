@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import MyPhoto from '../common/imege/avatar.jpg'
-import {Line, LineSeparator} from "../common/Wrappers";
+import {Line, LineMemo, LineSeparator} from "../common/Wrappers";
+import React from "react";
 
 export const AvatarWrapper = styled.div`
   position: relative;
@@ -18,7 +19,6 @@ export const PhotoWrapper = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   display: block;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), 20%, rgba(7, 7, 7, 0));
 `
@@ -48,6 +48,7 @@ export const Name = styled.p`
   color: #fff;`
 
 export const Avatar = () => {
+    console.log('Avatar')
     return (
         <AvatarWrapper>
             <PhotoWrapper>
@@ -57,10 +58,12 @@ export const Avatar = () => {
                 <Name>Hvedinich Artem</Name>
                 <LineSeparator width={3} colorOpacity={1}/>
             </NameWrapper>
-            <Line opacity={0.25} width={-1} height={1}/>
-            <Line opacity={0.15} width={-2} height={2}/>
-            <Line opacity={.05} width={-3} height={3}/>
-            <Line opacity={.02} width={-4} height={4}/>
+            <LineMemo opacity={0.25} width={-1} height={1}/>
+            <LineMemo opacity={0.15} width={-2} height={2}/>
+            <LineMemo opacity={.05} width={-3} height={3}/>
+            <LineMemo opacity={.02} width={-4} height={4}/>
         </AvatarWrapper>
     )
 }
+
+export const AvatarMemo = React.memo(Avatar)

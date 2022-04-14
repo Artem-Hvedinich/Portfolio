@@ -42,7 +42,6 @@ export type MenuType = {
     img: {}
 }
 
-
 export const store: StoreType = {
     skills: [
         {id: v1(), title: 'HTML/CSS', completed: 89},

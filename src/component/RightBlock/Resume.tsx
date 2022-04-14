@@ -47,7 +47,6 @@ const LineResume = styled.div`
 
 export const Resume = () => {
     const experience = store.experience
-
     return (
         <Wrapper id={'Resume'}>
             <RightBlockTitle title={'RESUME'} text={'Experience'} width={32}/>
@@ -65,3 +64,6 @@ export const Resume = () => {
         </Wrapper>
     );
 };
+
+export const ResumeMemo = React.memo(Resume)
+

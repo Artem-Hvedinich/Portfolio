@@ -13,3 +13,5 @@ export const Skills = () => {
         </Wrapper>
     )
 }
+export const SkillsMemo = React.memo(Skills)
+

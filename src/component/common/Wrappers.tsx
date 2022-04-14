@@ -1,4 +1,5 @@
 import styled, {keyframes} from "styled-components";
+import React from "react";
 
 export const gradient = keyframes`
   0% {
@@ -85,6 +86,7 @@ export const Arrow = styled.a`
   padding: 0.2vw;
   transform: rotate(-45deg);`
 
+
 export const Line = styled.div <{
     opacity?: number,
     width?: any, height?: any
@@ -99,3 +101,17 @@ export const Line = styled.div <{
   opacity: ${props => props.opacity || 1};
   transform: ${props => `translate(${props.width}vw,${props.height}vh)`}
 `
+export const LineMemo = React.memo(Line)
+
+export const SvgWrapper = styled.svg`
+  cursor: pointer;
+
+  & > path {
+    transition: all 0.3s linear;
+  }
+
+  &:hover > path {
+    fill: #e3af00 !important;
+    stroke: #e3af00 !important;
+    transition: all 0.3s
+  }`

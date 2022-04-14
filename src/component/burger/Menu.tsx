@@ -1,16 +1,12 @@
-import React from 'react';
+import React from "react";
 import {MenuType} from "../../store/store";
 import styled from "styled-components";
 
-const MainBlock = styled.div`
+const MainBlock = styled.a`
   display: flex;
+  width: 40%;
   align-items: center;
-  margin-left: 2rem;
   margin-bottom: 2vw;
-
-`
-
-const TextNav = styled.a`
   font-size: 1.3vw;
   font-weight: bolder;
   color: #7c7c7c;
@@ -21,36 +17,30 @@ const TextNav = styled.a`
   :hover {
     color: #e3af00;
   }`
+
 const Img = styled.svg`
-  display: inline-block;
-  width: 2vw;
+  width: 3vw;
   height: 2vw;
-  color: #7c7c7c;
-  font-size: 2rem;
-  padding-right: 2vw;
-  position: relative;
-  text-align: center;
-  transition: .2s ease;`
+`
 
 type propsMenuType = {
-    menu: Array<MenuType>
-    active: boolean
-    setActive: (active: boolean) => void
-}
+    menu: Array<MenuType>;
+    active: boolean;
+    setActive: (active: boolean) => void;
+};
 
 export const Menu = (props: propsMenuType) => {
     return (
         <>
             {props.menu.map((m) => {
-                    return (
-                        <MainBlock key={m.id}>
-                            <Img>{m.img}</Img>
-                            <TextNav onClick={() => props.setActive(!props.active)} href={`#${m.title}`}>{m.title}</TextNav>
-                        </MainBlock>
-                    )
-                }
-            )
-            }
+                return (
+                    <MainBlock key={m.id} onClick={() => props.setActive(!props.active)}
+                               href={`#${m.title}`}>
+                        <Img>{m.img}</Img>
+                        {m.title}
+                    </MainBlock>
+                );
+            })}
         </>
-    )
-}
+    );
+};

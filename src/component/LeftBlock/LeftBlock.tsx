@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Avatar} from "./Avatar";
+import { AvatarMemo} from "./Avatar";
 
 const LeftBlockWrapper = styled.div`
   position: fixed;
@@ -17,7 +17,7 @@ const LeftBlockWrapper = styled.div`
 export const LeftBlock = () => {
     return (
         <LeftBlockWrapper>
-            <Avatar/>
+            <AvatarMemo/>
         </LeftBlockWrapper>
     );
 };

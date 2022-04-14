@@ -14,4 +14,4 @@ export const Project = () => {
         </Wrapper>
     )
 }
-
+export const ProjectMemo = React.memo(Project)

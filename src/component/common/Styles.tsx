@@ -18,7 +18,7 @@ const Layer = styled.div<{ rotate: number, right: number, top: number }>`
 `
 
 export const Styles = () => {
-
+    console.log('Style')
     return (
         <div style={{transform: 'translate(10%, 0px) rotate(30deg) ', opacity: '0.3', zIndex: '-20'}}>
             <Layer right={0} top={1} rotate={0}/>
@@ -82,8 +82,8 @@ export const Styles = () => {
             <Layer right={29} top={30} rotate={290}/>
             <Layer right={29.5} top={30.5} rotate={295}/>
             <Layer right={30} top={31} rotate={300}/>
-            {/*<Layer right={30.5} top={31.5} rotate={305}/>*/}
         </div>
 
     );
 };
+export const StylesMemo = React.memo(Styles)

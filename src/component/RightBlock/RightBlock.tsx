@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import {Skills} from "./skills/Skills";
-import {Project} from "./project/Project";
-import {Styles} from "../common/Styles";
-import {About} from './About';
-import {Resume} from './Resume';
-import { Home } from './Home';
-import {Contact} from "./Contact";
+import {Skills, SkillsMemo} from "./skills/Skills";
+import {Project, ProjectMemo} from "./project/Project";
+import {Styles, StylesMemo} from "../common/Styles";
+import {About, AboutMemo} from './About';
+import {Resume, ResumeMemo} from './Resume';
+import {Home, HomeMemo} from './Home';
+import {Contact, ContactMemo} from "./Contact";
 
 const RightBlockWrapper = styled.div`
   position: fixed;
@@ -51,17 +51,17 @@ export const RightBlock = () => {
             <Scroll>
                 <InnerContent>
                     <SectionContainer>
-                            <Home/>
-                            <About/>
-                            <Resume/>
-                            <Skills/>
-                            <Project/>
-                            <Contact/>
+                        <HomeMemo/>
+                        <AboutMemo/>
+                        <ResumeMemo/>
+                        <SkillsMemo/>
+                        <ProjectMemo/>
+                        <ContactMemo/>
                     </SectionContainer>
                 </InnerContent>
             </Scroll>
             <StylesWrapper>
-                <Styles/>
+                <StylesMemo/>
             </StylesWrapper>
         </RightBlockWrapper>
     );

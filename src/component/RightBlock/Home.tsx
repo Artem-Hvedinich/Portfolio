@@ -12,5 +12,5 @@ export const Home = () => {
         </Wrapper>
     )
 }
-
+export const HomeMemo = React.memo(Home)
 
