@@ -17,8 +17,7 @@ const AppWrapper = styled.div`
   background-size: 500% 500%;
   opacity: 1;
   transform: translate(0px, 0px);
-  animation: ${gradient} 5s ease infinite;
-`;
+  animation: ${gradient} 5s ease infinite;`
 
 const NavOnOff = styled.div<{ width: number; opacity: number }>`
   position: fixed;
@@ -45,7 +44,7 @@ function App() {
       <Burger active={active} onChange={setActive} />
       <Nav setActive={setActive} active={active} />
     </AppWrapper>
-  );
+  )
 }
 
 export default App;

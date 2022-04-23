@@ -47,8 +47,8 @@ export const LineSeparator = styled.p<{ colorOpacity?: number, width?: number }>
   opacity: 0.6;
   z-index: 100`
 
-export const MainText = styled.p`
-  font-size: 2vw;
+export const MainText = styled.p<{ fontSz?: string }>`
+  font-size: ${({fontSz}) => fontSz || '2vw'};
   margin-top: 2vw;`
 
 export const IconButtonWrapper = styled.div`

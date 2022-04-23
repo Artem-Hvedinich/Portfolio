@@ -14,8 +14,8 @@ const RightBlockWrapper = styled.div`
   height: 100%;
   z-index: 1;
   inset: 0;
-  overflow: hidden;
-`
+  overflow: hidden;`
+
 const Scroll = styled.div`
   z-index: 100;
   height: 100vh;
@@ -29,8 +29,7 @@ const InnerContent = styled.div`
   overflow: visible;
   transform: translate(0px, -10px);
   transition: transform 1s;
-  transition-delay: 1s;
-`
+  transition-delay: 1s;`
 
 const SectionContainer = styled.div`
   max-width: 85%;

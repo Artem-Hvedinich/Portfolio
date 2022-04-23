@@ -43,24 +43,21 @@ export const MyProject = () => {
     return (
         <PortfolioWrapper>
             {
-                project.map(m => {
-                    return (
-                        <ImageWrapper key={m.id}>
-                            <a href={m.href}>
-                                <IconButtonWrapper>
-                                    <IconButton>
-                                        <Arrow/>
-                                    </IconButton>
-                                </IconButtonWrapper>
-                            </a>
-                            <TitleWrapper>
-                                <Text width={32} mrgLeft={0} mrgIn={0} fontSz={2}>{m.title}</Text>
-                                <LineSeparator width={2.5} colorOpacity={1}/>
-                            </TitleWrapper>
-                            <Image bgImg={m.img}/>
-                        </ImageWrapper>
-                    )
-                })
+                project.map(m => <ImageWrapper key={m.id}>
+                        <a href={m.href}>
+                            <IconButtonWrapper>
+                                <IconButton>
+                                    <Arrow/>
+                                </IconButton>
+                            </IconButtonWrapper>
+                        </a>
+                        <TitleWrapper>
+                            <Text width={32} mrgLeft={0} mrgIn={0} fontSz={2}>{m.title}</Text>
+                            <LineSeparator width={2.5} colorOpacity={1}/>
+                        </TitleWrapper>
+                        <Image bgImg={m.img}/>
+                    </ImageWrapper>
+                )
             }
         </PortfolioWrapper>
     )

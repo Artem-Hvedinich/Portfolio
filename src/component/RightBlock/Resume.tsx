@@ -12,6 +12,11 @@ const ExperienceWrapper = styled.div`
   z-index: 1;
   transform: translate(20%, 0%);
 
+  //border-width: 0;
+  //border-color: white;
+  //border-style: solid;
+  //border-left-width: 1px;
+
   ::after {
     display: block;
     content: "";
@@ -21,8 +26,7 @@ const ExperienceWrapper = styled.div`
     height: 3vw;
     bottom: 0;
     z-index: 0;
-    //border: 1px solid white;
-    transform: translate(-150%, -370%) rotate(225deg);
+    transform: translate(-150%, -600%) rotate(225deg);
   }`
 
 const LineExperience = styled.div`
@@ -36,28 +40,29 @@ const LineExperience = styled.div`
 `
 
 const LineResume = styled.div`
-  width: 59vw;
+  width: 32vw;
   border-width: 0;
   border-color: white;
   border-style: solid;
   border-bottom-width: 1px;
   opacity: 0.3;
-  transform: translate(-29vw, 31.5vw) rotate(90deg);
-`
+  transform: translate(-26vw, 13vw) rotate(90deg);`
 
 export const Resume = () => {
     const experience = store.experience
     return (
         <Wrapper id={'Resume'}>
             <RightBlockTitle title={'RESUME'} text={'Experience'} width={32}/>
-            <MainText>Lorem ipsum dolor sit amet, consectetur. Adipiscing elit. Aenean et elementum purus.</MainText>
-            <LineResume/>
+            <MainText>These are the projects in which I participated</MainText>
+
             {experience.map((m) => {
                 return <ExperienceWrapper key={m.id}>
                     <LineExperience/>
-                    <Title fontSz={1}>{m.project}</Title>
-                    <Text width={30} mrgLeft={0} mrgIn={2} fontSz={1.5}>{m.position}</Text>
-                    <MainText>{m.info}</MainText>
+                    <LineResume/>
+                    <Title fontSz={1.1}>{m.project}</Title>
+                    <Text width={30} mrgLeft={0} mrgIn={0.5} fontSz={1.4}>{m.data}</Text>
+                    <Text width={30} mrgLeft={0} mrgIn={2} fontSz={1.2}>{m.position}</Text>
+                    <MainText fontSz={'1.4vw'}>{m.info}</MainText>
                 </ExperienceWrapper>
             })}
 

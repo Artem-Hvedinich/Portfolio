@@ -24,6 +24,7 @@ export type ProjectType = {
 }
 export type ExperienceType = {
     project: string
+    data: string
     position: string
     info: string
     id: string
@@ -44,10 +45,11 @@ export type MenuType = {
 
 export const store: StoreType = {
     skills: [
-        {id: v1(), title: 'HTML/CSS', completed: 89},
-        {id: v1(), title: 'JavaScript/TypeScript', completed: 78},
-        {id: v1(), title: 'React/Redux', completed: 75},
-
+        {id: v1(), title: 'HTML / CSS', completed: 89},
+        {id: v1(), title: 'JavaScript / TypeScript', completed: 73},
+        {id: v1(), title: 'React / Redux / Redux Toolkit', completed: 79},
+        {id: v1(), title: 'Styled Components', completed: 85},
+        {id: v1(), title: 'Rest API / UNIT Test', completed: 69},
     ],
     project: [
         {
@@ -68,22 +70,30 @@ export const store: StoreType = {
     experience: [
         {
             id: v1(),
-            project: 'IT-Incubator 2022',
+            project: 'Cards app',
+            data: 'Apr 2022 - in progress',
             position: 'Front-End Developer',
-            info: 'Lorem Ipsum is simply dummy text of the printing industry.'
+            info: `Used technologies: React/Redux-Toolkit/TypeScript/React-router-dom v6/Axios /Material UI
+            /Formik/SCSS/Git, Github. Creating learning app in team with using git, work withaxios(CRUD).`
         },
         {
             id: v1(),
-            project: 'Tesla 2021',
+            project: 'Todolist',
+            data: 'Jan 2022 - Apr 2022',
             position: 'Front-End Developer',
-            info: 'Lorem Ipsum is simply dummy text of the printing industry.'
+            info: `Used technologies: React/Redux/Redux-Toolkit/React-router-dom v6/ Jest(Unit-Tests) 
+            /Storybook/Axios /Formik/Material UI; Todolist app created with react hooks, routing and redirects, 
+            material UI, REST api request/response flow, unit-tests and etc. `
         },
         {
             id: v1(),
-            project: 'Google 2020',
+            project: 'Social Network',
+            data: 'Nov 2021 - in progress',
             position: 'Front-End Developer',
-            info: 'Lorem Ipsum is simply dummy text of the printing industry.'
-        }
+            info: `sed technologies: React/Redux/TypeScript/Redux-thunk/React-router-dom v6/React-hook-form/Axios/Jest;
+            Social network app with using react hooks, routing, lazy loading, working with REST api, login/logout flow, 
+            pagination, form and validation/file uploading using unit-tests for code workability check.`
+        },
     ],
     menu: [
         {id: v1(), title: 'Home', img: <HomeImg/>},

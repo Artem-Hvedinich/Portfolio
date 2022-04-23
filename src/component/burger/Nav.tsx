@@ -6,6 +6,7 @@ import {Text} from "../common/Wrappers";
 import {InstaImg} from "../common/imege/InstaImg";
 import {TelegramImg} from "../common/imege/TelegramImg";
 import {LinkedinImg} from "../common/imege/LinkedinImg";
+import {Link, NavLink} from "react-router-dom";
 
 const NavWrapper = styled.div<{ active: boolean }>`
   width: 25%;
@@ -54,7 +55,6 @@ const IconWrapper = styled.div`
   width: 40%;
   display: flex;
   justify-content: space-between;
-  margin-top: 2vw;
 `;
 
 export const Nav = ({
@@ -91,9 +91,9 @@ export const Nav = ({
                 <SocialWrapper>
                     <TextSocial>Social</TextSocial>
                     <IconWrapper>
-                        <InstaImg/>
-                        <TelegramImg/>
-                        <LinkedinImg/>
+                        <a href={'https://www.linkedin.com/in/artem-hvedinich/'}><LinkedinImg/></a>
+                        <a href={'https://t.me/hvedinich'}><TelegramImg/></a>
+                        <a href={'https://www.instagram.com/artem_hvedinich/'}><InstaImg/></a>
                     </IconWrapper>
                 </SocialWrapper>
             </MenuWrapper>
